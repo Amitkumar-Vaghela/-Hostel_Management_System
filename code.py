@@ -49,19 +49,17 @@ class Hostel:
             table.append([room_number, student.name, student.roll_number])
         print(tabulate(table, headers="firstrow"))
 
-# Example usage
 hostel = Hostel()
 
-# Adding students
+
 num_students = int(input("Enter the number of students to add: "))
 for _ in range(num_students):
     hostel.add_student()
 
-# Allocating rooms
+
 for student in hostel.students:
     hostel.allocate_room(student)
 
-# Displaying information
 hostel.display_students()
 hostel.display_room_allocation()
 
